@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "righteous";
+    src: url('../font/Righteous-Regular.ttf');
+}
+.righteous {
+    font-family: "righteous", sans-serif;
+}
+
+@font-face {
+    font-family: "p300";
+    src: url('../font/Poppins-Light.ttf');
+}
+.p-300 {
+    font-family: "p300";
+}
+
+@font-face {
+    font-family: "p400";
+    src: url('../font/Poppins-Regular.ttf');
+}
+.p-400 {
+    font-family: "p400";
+}
+
+@font-face {
+    font-family: "p500";
+    src: url('../font/Poppins-Medium.ttf');
+}
+.p-500 {
+    font-family: "p500";
+}
+
+@font-face {
+    font-family: "p700";
+    src: url('../font/Poppins-Bold.ttf');
+}
+.p-700 {
+    font-family: "p700";
+}

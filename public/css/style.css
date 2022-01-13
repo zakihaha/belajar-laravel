@@ -1,0 +1,193 @@
+.biru {
+    color: #16243F;
+}
+
+.navbar {
+    background-color: #16243F!important;
+}
+
+.navbar .brand{
+    font-family: righteous;
+}
+
+.btn{
+    border-radius: 30px;
+}
+
+body {
+    background-color: #B3CCC9;
+    font-family: p400;
+    font-size: 14px;
+}
+
+body.account{
+    color: white;
+    font-family: p400;
+}
+
+.block-acc{
+    text-align: center;
+    margin: 100px;
+    width: 70%;
+    border-radius: 50px;
+    background-color: #16243F;
+    padding: 80px 100px 80px 100px;
+}
+
+.block-center{
+    text-align: -webkit-center;
+}
+
+.img-acc{
+    width: 25%;
+}
+
+.input{
+    background-color: white;
+    border-radius: 20px;
+    height: 40px;
+    margin-top: 20px;
+    text-align: left;
+    padding: 5px 20px 5px 20px;
+}
+
+.input input{
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+footer{
+    padding: 20px;
+    margin-top: 80px;
+    background-color: #16243F;
+    text-align: center;
+    color: white;
+}
+
+.hero {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.hero .col-md-6 {
+    padding: 100px;
+}
+
+.hero .txt h1 {
+    font-size: 50px;
+}
+
+.hero .btn {
+    width: 129px;
+    color: white;
+}
+
+.menu .block-hr {
+    background-color: #16243F;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-family: righteous;
+    margin-bottom: 50px;
+}
+
+.menu .col-md-12{
+    margin-top: 30px;
+}
+
+.menu .star {
+    width: 15px;
+}
+
+.menu .card {
+    border-radius: 30px;
+}
+
+.menu a{
+    text-decoration: none!important;
+
+}
+
+.menu .card-title, .menu .card-text {
+    color: black;
+    font-style: normal;
+}
+
+.menu .card img {
+    border-radius: 30px;
+}
+
+.toko .cover {
+    width: 100%;
+    height: 330px;
+}
+
+.toko .kupon {
+    background: #16243F;
+    color: white;
+    width: 100%;
+    padding: 5px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.toko .block-menu {
+    background: white;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.toko .block-menu h4 {
+    font-family: righteous;
+}
+
+.toko .block-menu .ic-menu {
+    width: 100%;
+    border-radius: 30px;
+}
+
+.toko .block-menu .btn {
+    background: #16243F;
+    border-radius: 10px;
+}
+
+.toko .block-menu .btn img {
+    width: 100%;
+}
+
+.toko .block-menu .col-md-8 {
+    text-align: right;
+    align-self: center;
+}
+
+.toko .block-menu .col-md-8 input {
+    border: none;
+    width: 50px;
+}
+
+.keranjang .block-white {
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+    padding: 50px;
+}
+
+.keranjang .block-white img {
+    width: 100%;
+    border-radius: 30px;
+}
+
+.kanan {
+    text-align: right;
+}
+
+.btn-kenyang {
+    background-color: #16243F;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    height: 45px;
+}
+
