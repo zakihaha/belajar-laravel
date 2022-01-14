@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Bought;
+use App\Models\Cart;
 use App\Models\Menu;
+use App\Models\Restaurant;
 use Illuminate\Http\Request;
 
 class BuyController extends Controller
@@ -12,26 +14,48 @@ class BuyController extends Controller
     {
         $carts = auth()->user()->carts;
         $total = auth()->user()->carts->sum('subprice');
-        
+
         return view('cart.index', [
             'carts' => $carts,
             'total' => $total
         ]);
     }
     
-    public function addToCart()
+    public function addToCart(Menu $menu)
     {
-        $menu = Menu::where('id', request()->menu_id)->first()->price;
-        $subprice = request()->quantity * $menu;
+        // return $menu->price;
+       $subprice = request()->quantity * $menu->price;
 
-        auth()->user()->carts()->create([
-            'menu_id' => request()->menu_id,
-            'note' => request()->note,
-            'quantity' => request()->quantity,
-            'subprice' => $subprice
-        ]);
+        // $userCart = auth()->user()->carts->where('menu_id', $menu->id);
+
+        // // kalau menu sudah ada
+        // if (count($userCart) == 1) {
+        //     $userCart->update([
+        //         'quantity' => $userCart[1]->quantity += request()->quantity,
+        //     ]);
+            
+        // } else {
+            auth()->user()->carts()->create([
+                'menu_id' => $menu->id,
+                'quantity' => request()->quantity,
+                'subprice' => $subprice
+            ]);
+        // }
 
         return redirect()->route('cart.index');
+    }
+
+    public function update(Cart $cart)
+    {
+        // request()->validate([
+        //     'note' => ['required', 'min:2']
+        // ]);
+
+        $cart->update([
+            'note' => request()->note
+        ]);
+
+        return redirect()->back();
     }
     
     public function checkout()
@@ -51,7 +75,7 @@ class BuyController extends Controller
 
         $invoice = auth()->user()->invoices()->create([
             'address' => request()->address,
-            'total' => auth()->user()->carts->sum('subprice')
+            'total' => request()->total
         ]);
 
         foreach ($carts as $cart) {
@@ -66,10 +90,11 @@ class BuyController extends Controller
 
         auth()->user()->carts()->delete();
                                 // $invoice->id
-        $boughts = Bought::where('invoice_id', $invoice->id)->get();
+        $boughts = Bought::where('invoice_id', 24)->get();
         
         return view('invoice', [
-            'boughts' => $boughts
+            'boughts' => $boughts,
+            'invoice' => $invoice
         ]);
     }
 }

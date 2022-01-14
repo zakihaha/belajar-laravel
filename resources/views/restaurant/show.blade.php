@@ -20,15 +20,9 @@
                     <p class="card-text p-300">{{ $menu->sold }}</p>
 
                     @if (Auth::user())
-                    <form action="{{ route('addToCart') }}" method="post">
+                    <form action="{{ route('addToCart', $menu->id) }}" method="post">
                         @csrf
-                        <input type="hidden" name="menu_id" id="menu_id" value="{{$menu->id}}">
                         <input type="number" name="quantity" id="quantity">
-
-                        <div class="mb-3">
-                            <label for="">Catatan</label>
-                            <input class="form-control" type="text" name="note" id="note" placeholder="Masukkan catatan">
-                        </div>
                         
                         <button class="btn btn-kenyang">Add to cart</button>
                     </form>

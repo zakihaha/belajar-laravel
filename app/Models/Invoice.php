@@ -12,6 +12,7 @@ class Invoice extends Model
     protected $fillable = [
         'invoice_id',
         'address',
+        'total',
     ];
 
     public function boughts()

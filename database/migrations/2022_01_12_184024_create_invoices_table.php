@@ -17,6 +17,7 @@ class CreateInvoicesTable extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->text('address');
+            $table->integer('total');
             $table->timestamps();
         });
     }
